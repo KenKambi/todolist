@@ -1,27 +1,26 @@
-const myArray=[{
-    name:'book flight',
-    dueDate:'12-11-2024'
-    }, {
-    name: 'buy cars',
-    dueDate: '12-11-2024'
-    }];
+const myArray=[''];
 
 function clickList(){
     let taskNameHTML='';
 
     for (let i= 0; i <myArray.length; i++){
+        if( i === 0){
+            continue;//jump the first index
+        }
             const taskNameObject = myArray[i];
             //const name = taskNameObject.name;
             //const dueDate = taskNameObject.dueDate; Destructuring
             const{name, dueDate} = taskNameObject;
 
 
-            const html = `<p> ${name} ${dueDate} 
-                        <button onclick="
+            const html = `<div class="result"> ${name} <div>${dueDate}</div> 
+                        <button 
+                        class="delete"
+                        onclick="
                         myArray.splice(${i},1);
                         clickList();"
                         >Delete</button>
-            </p>`; //generating some HTML code
+            </div>`; //generating some HTML code
             taskNameHTML +=html;
     }
 

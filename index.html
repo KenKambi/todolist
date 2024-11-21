@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>To-Do-List</title>
 </head>
 <body>
-    <p>Todo List</p>
+    <h1>Todo List</h1>
 
+    <div class="grid">
     <input 
     class="js-input"
     onkeydown="
-    if(onkedown === 'Enter'){
+    if(event.key === 'Enter'){
         inputEvent();
     };"
     placeholder="Input">
@@ -20,11 +22,12 @@
     type="date">
 
     <button
+    class="add"
     onclick=" inputEvent();
     clickList()"
     >Add</button>
-
-    <div>Current List:</div>
+    </div>
+    <h3>Current List:</h3>
     <div class="js-list">
 
     </div>
