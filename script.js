@@ -28,6 +28,14 @@ console.log(taskNameHTML);
 document.querySelector('.js-list').innerHTML = `${taskNameHTML}`;
 }
 
+const keyDown = document.querySelector('.js-input');
+keyDown.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter'){
+        inputEvent();
+    }
+});
+
+
 //Input box
 function inputEvent(){
     const inputElelemt = document.querySelector('.js-input');

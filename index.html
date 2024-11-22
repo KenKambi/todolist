@@ -10,30 +10,23 @@
     <h1>Todo List</h1>
 
     <div class="grid">
-    <input 
-    class="js-input"
-    onkeydown="
-    if(event.key === 'Enter'){
-        inputEvent();
-    };"
-    placeholder="Input">
-    
-    <input class="js-date"
-    type="date">
+        <input 
+        class="js-input"
+        placeholder="Input">
+        
+        <input class="js-date"
+        type="date">
 
-    <button
-    class="add"
-    onclick=" inputEvent();
-    clickList()"
-    >Add</button>
+        <button
+        class="add"
+        onclick=" inputEvent();
+        clickList()"
+        >Add</button>
     </div>
-    <h3>Current List:</h3>
-    <div class="js-list">
+        <h3>Current List:</h3>
+        
+        <div class="js-list"></div>
 
-    </div>
-
-   
-    
 </body>
 <script src="script.js"></script>
 </html>

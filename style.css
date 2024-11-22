@@ -32,6 +32,7 @@ input{
     padding-left: 4px;
     font-size: 15px;
     vertical-align: top;
+    border: none;
 }
 
 .js-date{
