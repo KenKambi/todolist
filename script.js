@@ -1,6 +1,10 @@
-const myArray=[''];
+const myArray= [''];
 
-function clickList(){
+document.querySelector('.js-add').addEventListener('click', () => {
+    inputEvent();
+})
+
+function clickList() {
     let taskNameHTML='';
 
     for (let i= 0; i <myArray.length; i++){
